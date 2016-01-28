@@ -1,0 +1,8 @@
+# Instant Chat Relay Exam
+
+
+Database Installation
+-------------
+
+Run blow commands for database.
+createdb --encoding=UTF8 --owner=exam chatExam

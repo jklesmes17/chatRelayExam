@@ -1,0 +1,9 @@
+@(loginForm: Form[String], channelForm: Form[Channel], channels: Seq[Channel])(implicit msg: Messages, request: RequestHeader)
+@main("Chikka Messenger") {
+  <div class="row mainContainer expanded">
+    @channel(channels, channelForm, 0)
+    @if(request.session.get("username").isEmpty) {
+      @login(loginForm)
+    }
+  </div>
+}

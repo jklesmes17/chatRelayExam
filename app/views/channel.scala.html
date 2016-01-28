@@ -1,0 +1,28 @@
+@(channels: Seq[Channel], channelForm: Form[Channel], cId: Int)(implicit msg: Messages, request: RequestHeader)
+@import helper._
+<div class="large-3 columns expanded channel" style="background-color: whitesmoke;">
+    <div class="medium-12 columns expanded label">
+        <h4>Chikka Messenger</h4>
+    </div>
+    @if(!request.session.get("username").isEmpty) {
+        <div class="channelAdd">
+            <h4>Add Channels</h4>
+            <a href="@routes.Application.logout">Logout</a>
+            @form( action = routes.Application.channelSubmit) {
+                @inputText(channelForm("name"), '_showConstraints -> false, '_label -> "Channel Name")
+                @inputText(channelForm("desc"), '_showConstraints -> false, '_label -> "Description")
+                <input type="submit" class="button expanded" value="Submit" name="addChannel">
+            }
+        </div>
+    }
+    <div class="medium-12 columns expanded channelList">
+        <div class="small-12 columns label expanded">
+            <h4>Channel List</h4>
+        </div>
+        <ul>
+        @for(channel <- channels){
+            <li><a href="@routes.Application.channelRoom(channel.id)" class="@if(cId == channel.id) {channelActive}">@channel.name.capitalize</a></li>
+        }
+        </ul>
+    </div>
+</div>

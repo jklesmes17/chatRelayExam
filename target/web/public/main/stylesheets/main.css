@@ -1,0 +1,22 @@
+
+ul li { list-style-type: none;}
+
+
+.mainContainer { height: 100%; position: relative;}
+.channel { border: 1px solid black; overflow: scroll;}
+.channelBtn { position: absolute; top: 0;}
+.channelAdd { height: 30px; margin-top: 50px; display: block;}
+
+.logs { width: 100%; overflow: scroll; position: relative;}
+.logs input {position: absolute; bottom: 0;}
+.logs input[type="submit"] {position: absolute; bottom: 0; right:0;}
+.logsMessage { border: 1px solid black; height: 700px; overflow: auto;}
+.chatBubble { background-color: gray; height: 70px; margin-top: 10px; }
+.chatBubble img{ width: 70px; margin: 0 0 0 20px;}
+.messageDiv { margin-left: -40px;}
+.messageDiv label{ margin-left: -40px; font-style: italic;}
+
+.login { border: 1px solid black; width: 100%; overflow: scroll; position: relative;}
+.formLogin { width: 700px; height: 450px; position: absolute; top: 150px; right: 180px;}
+.channelList {margin-top: 260px;}
+.channelActive { color: red;}

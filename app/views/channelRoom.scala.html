@@ -1,0 +1,45 @@
+@(loginForm: Form[String], channels: Seq[Channel], logs: Seq[Log], logForm: Form[String], channelForm: Form[Channel], cId: Int)(implicit msg: Messages, request: RequestHeader)
+@import helper._
+
+@main("Chikka Messenger") {
+  <div class="row mainContainer expanded">
+    @channel(channels, channelForm, cId)
+    @if(request.session.get("username").isEmpty) {
+      @login(loginForm)
+    } else {
+    <div class="large-9 columns expanded logs">
+      <div id="logs" class="logsMessage">
+          @for(log <- logs) {
+          <div class="chatBubble">
+            <div class="row expanded">
+              <div class="small-2 columns">
+                <img src="@routes.Assets.versioned("images/avatar.jpeg")">
+              </div>
+              <div class="small-9 columns messageDiv">
+                <p>@log.message</p>
+                <label>by: @log.username.capitalize posted: @log.posted.toString("yyyy-dd-mm H:s")</label>
+              </div>
+            </div>
+          </div>
+          }
+      </div>
+      @form( action = routes.Application.postSubmit(cId)) {
+        @inputText(logForm("message"), '_showConstraints -> false, 'autofocus -> "autofocus")
+        <input type="hidden" name="idChannel" value="@cId">
+        <input type="submit" class="button" name="test" value="Submit">
+      }
+    </div>
+    }
+  </div>
+}
+
+
+
+
+
+
+
+
+
+
+

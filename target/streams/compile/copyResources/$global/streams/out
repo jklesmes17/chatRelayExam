@@ -1,0 +1,7 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Volumes/Development/Projects/chatRelay/conf/application.conf,/Volumes/Development/Projects/chatRelay/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Volumes/Development/Projects/chatRelay/conf/evolutions,/Volumes/Development/Projects/chatRelay/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Volumes/Development/Projects/chatRelay/conf/logback.xml,/Volumes/Development/Projects/chatRelay/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Volumes/Development/Projects/chatRelay/conf/routes,/Volumes/Development/Projects/chatRelay/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Volumes/Development/Projects/chatRelay/conf/evolutions/default,/Volumes/Development/Projects/chatRelay/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Volumes/Development/Projects/chatRelay/conf/evolutions/default/1.sql,/Volumes/Development/Projects/chatRelay/target/scala-2.11/classes/evolutions/default/1.sql)[0m

@@ -1,0 +1,10 @@
+@(loginForm: Form[String])(implicit msg: Messages, request: RequestHeader)
+@import helper._
+
+<div class="large-9 columns expanded login">
+  <div class="formLogin">
+    @form(action = routes.Application.loginSubmit) {
+      @inputText(loginForm("username"), '_showConstraints -> false)
+      <input type="submit" class="button expanded" name="login" value="Login"> }
+  </div>
+</div>
